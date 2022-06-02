@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js100</title>
+</head>
+
+<body>
+  <script>
+
+    //Q1
+
+    // function compareNumbers(a, b) {
+    //   if (a > b) {
+    //     return a;
+    //   } else if (b > a) {
+    //     return b;
+    //   } else {
+    //     return "eq";
+    //   }
+    // }
+
+    // console.log(compareNumbers(2, 5)); // 5
+    // console.log(compareNumbers(10, 9)); // 10
+    // console.log(compareNumbers(2, 2)); // eq
+
+    //Q2
+
+    // function convertToMm(n, s) {
+    //   if (s == "km") {
+    //     n = n * 1000000;
+    //     return n;
+    //   } else if (s == "m") {
+    //     n = n * 1000;
+    //     return n;
+    //   } else {
+    //     n = n * 10;
+    //     return n;
+    //   }
+    // }
+
+    // console.log(convertToMm(1, "km")); // 1000000
+    // console.log(convertToMm(54, "km")); // 54000000
+    // console.log(convertToMm(2, "cm")); // 20
+
+
+    //Q3 
+
+    // function oddOrEven(n) {
+    //   if (n % 2 == 0) {
+    //     return "even";
+    //   } else {
+    //     return "odd";
+    //   }
+    // }
+
+    // console.log(oddOrEven(4)); // even
+    // console.log(oddOrEven(5)); // odd
+    // console.log(oddOrEven(2)); // even
+
+
+    // Q4 
+
+    // function calculateYears(a, b) {
+    //   if (a < b) {
+    //     return b - a;
+    //   } else {
+    //     return "aとb逆、もしくは同じ年にしてるよ";
+    //   };
+    // };
+
+    // console.log(calculateYears(1990, 2014)); // 24
+    // console.log(calculateYears(1999, 2000)); // 1
+    // console.log(calculateYears(794, 1192)); // 398
+
+
+    //Q5 
+
+    // function judgeTh(c) {
+    //   const str1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    //   return str1.indexOf(c) + 1;
+    // }
+
+    // console.log(judgeTh("C")); // 3
+    // console.log(judgeTh("X")); // 24
+
+
+    //Q6 
+
+    // function getAbs(n) {
+    //   const z = Math.abs(n);
+    //   return z;
+    // }
+
+    // console.log(getAbs(-10)); // 10
+    // console.log(getAbs(15)); // 15
+    // console.log(getAbs(0)); // 0
+
+    //Q7 
+
+    // function getQuotientAndSurplus(m, n) {
+    //   const sho = Math.floor(m / n);
+    //   const amari = Math.floor(m % n);
+    //   return sho + " " + amari;
+    // }
+
+    // console.log(getQuotientAndSurplus(10, 3)); // 3 1
+    // console.log(getQuotientAndSurplus(12, 14)); // 0 12
+
+    // Q8 
+
+    // function convertToUppercase(s) {
+    //   const oomoji = s.toUpperCase();
+    //   return oomoji;
+    // }
+
+    // console.log(convertToUppercase("gsacademy")); // GSACADEMY
+    // console.log(convertToUppercase("abcdefghijklmnopqrstuvwxyz")); // ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+
+    //Q9 
+
+
+    // function createList(n) {
+    //   const data = [];
+    //   for (let i = 1; i < 10; i++) {
+    //     x = n * i;
+    //     data.push(x);
+    //   }
+    //   const str = data.join(" ");
+    //   return str;
+    // }
+
+    // console.log(createList(2)); // 2 4 6 8 10 12 14 16 18
+    // console.log(createList(3)); // 3 6 9 12 15 18 21 24 27
+    // onsole.log(createList(5)); // 5 10 15 20 25 30 35 40 45
+
+
+    //Q10 
+
+
+    // function createSequence(m, n) {
+    //   const data = [];
+    //   for (let i = 0; i < 10; i++) {
+    //     data.push(n * i + m);
+    //   }
+    //   const str = data.join(" ");
+    //   return str;
+
+    // }
+
+    // console.log(createSequence(3, 3)); // 3 6 9 12 15 18 21 24 27 30
+    // console.log(createSequence(5, 10)); // 5 15 25 35 45 55 65 75 85 95
+    // console.log(createSequence(1, 3)); // 1 4 7 10 13 16 19 22 25 28
+
+
+
+    //Q11
+
+
+    // function countDown(n) {
+    //   const data = [];
+    //   for (let i = 1; i < 100000; i++) { //ちょっと無理やりですが、、、
+    //     if (n > 0) {
+    //       data.push(n);
+    //       n = n - 1
+    //     } else {
+    //       break;
+    //     }
+    //   }
+    //   const str = data.join(" ");
+    //   return str;
+    // }
+
+    // console.log(countDown(3)); // 3 2 1
+    // console.log(countDown(10)); // 10 9 8 7 6 5 4 3 2 1
+
+    // Q12 
+
+
+    // function getOneToN(s, n) {
+    //   const kekka = s.substr(0, n);
+    //   return kekka;
+    // }
+
+    // console.log(getOneToN("aabbccdd", 5)); // aabbc
+    // console.log(getOneToN("gsacademyfukuoka", 9)); // gsacademy
+
+    //Q13 
+
+
+    // function getMaxAndMin(s) {
+    //   const str = s;
+    //   //配列に変換
+    //   const arr = str.split(' ');
+    //   let max_val = Math.max(...arr);
+    //   let min_val = Math.min(...arr);
+    //   kekka = max_val + " " + min_val
+    //   return kekka;
+    // }
+
+    // console.log(getMaxAndMin("9 12 3 6 10")); // 12 3
+    // console.log(getMaxAndMin("1 1 2 2 3")); // 3 1
+    // console.log(getMaxAndMin("5 9 -1 10 2")); // 10 -1
+
+    //Q14 
+
+    // function getNthChar(s, n) {
+    //   const kekka = s.charAt(n - 1);
+    //   return kekka;
+    // }
+
+    // console.log(getNthChar("gsacademy", 3)); // a
+    // console.log(getNthChar("abcdefg", 5)); // e
+    // console.log(getNthChar("qwertyu", 1)); // q
+
+    //Q15 
+
+
+    // function isEqual(s, t) {
+    //   if (s === t) {
+    //     // 完全一致のときの処理
+    //     return "Yes";
+    //   } else {
+    //     return "No";
+    //   }
+    // }
+
+
+    // console.log(isEqual("gsacademy", "gsacademy")); // Yes
+    // console.log(isEqual("JavaScript", "ジャバスク")); // No
+    // console.log(isEqual("aaaaa", "aaaaaa")); // No
+
+
+    //Q16 
+
+    // function getNumberOfA(s) {
+    //   const targetStr = "A";
+    //   const kekka = (s.match(new RegExp(targetStr, "g")) || []).length;
+    //   return kekka;
+    // }
+
+    // console.log(getNumberOfA("GSACADEMY")); // 2
+    // console.log(getNumberOfA("aAaAaA")); // 3
+    // console.log(getNumberOfA("JavaScript")); // 0
+
+
+    //Q17 
+
+    // function getSurfaceArea(a) {
+    //   const menseki = a * a * 6;
+    //   return menseki;
+    // }
+
+    // console.log(getSurfaceArea(4)); // 96
+    // console.log(getSurfaceArea(1)); // 6
+
+    //Q18 
+
+    // function getAngle(a, b) {
+    //   const kakudo = 180 - a - b;
+    //   return kakudo;
+    // }
+
+    // console.log(getAngle(30, 90)); // 60
+    // console.log(getAngle(45, 45)); // 90
+
+    //Q19 
+
+    // function zeroPadding3(n) {
+    //   const num = n;
+    //   const data = ('000' + num).slice(-3);
+    //   return data;
+    // }
+
+    // console.log(zeroPadding3(98)); // 098
+    // console.log(zeroPadding3(2)); // 002
+
+    //Q20 
+
+    // function getPaidHolidays(s) {
+    //   const str = s;
+    //   let cnt = 0;
+    //   //配列に変換
+    //   const arr = str.split(' ');
+    //   for (let i = 0; i < arr.length; i++) {
+    //     let yesNo = arr[i];
+    //     if (yesNo == "no") {
+    //       cnt++;
+    //     }
+    //   }
+    //   return cnt;
+
+    // }
+
+    // console.log(getPaidHolidays("yes yes yes yes no no yes")); // 2
+    // console.log(getPaidHolidays("yes no no no no no yes")); // 5
+
+
+    //Q21 
+
+    // function getSum(n) {
+    //   let sum = 0;
+    //   for (let i = 1; i <= n; i++) {
+    //     sum += i;
+    //   }
+    //   return sum;
+    // }
+
+    // console.log(getSum(10)); // 55
+    // console.log(getSum(99)); // 4950
+
+
+    //Q22  
+
+    // function getNumberOfDigits(n) {
+    //   return n.toString().length;
+    // }
+
+    // console.log(getNumberOfDigits(100)); // 3
+    // console.log(getNumberOfDigits(114514)); // 6
+
+
+    //Q23   
+
+    // function getBackSide(n) {
+    //   return 7 - n;
+    // }
+
+    // console.log(getBackSide(1)); // 6
+    // console.log(getBackSide(3)); // 4
+
+
+    //Q24  
+
+    // function convertToSeconds(n) {
+    //   return n * 60;
+    // }
+
+    // console.log(convertToSeconds(16)); // 960
+    // console.log(convertToSeconds(3)); // 180
+
+
+    //Q25   
+
+    // function getTimeUntilFull(n) {
+    //   return 100 - n;
+    // }
+
+    // console.log(getTimeUntilFull(70)); // 30
+    // console.log(getTimeUntilFull(25)); // 75
+
+
+    //Q26   
+
+    // function getInitialFromName(s) {
+    //   const arr = s.split(' ');
+    //   const f = arr[0].substr(0, 1);
+    //   const l = arr[1].substr(0, 1);
+    //   return f + "." + l;
+    // }
+
+    // console.log(getInitialFromName("Dio Brando")); // D.B
+    // console.log(getInitialFromName("Pannacotta Fugo")); // P.F
+    // console.log(getInitialFromName("Gyro Zeppeli")); // G.Z
+
+
+
+    //Q27   
+
+    // function choiceOfGod(n) {
+    //   const data = 21 % n;
+    //   if (data === 0) {
+    //     return n;
+    //   } else {
+    //     return data;
+    //   }
+    // }
+
+    // console.log(choiceOfGod(4)); // 1
+    // console.log(choiceOfGod(3)); // 3
+
+
+    //Q28   
+
+    // function formatYMD(s) {
+
+    //   //配列に変換
+    //   const arr = s.split(' ');
+    //   const year = arr[0];
+    //   const year_keta = ('0000' + year).slice(-4);
+    //   const mon = arr[1];
+    //   const mon_keta = ('00' + mon).slice(-2);
+    //   const day = arr[2];
+    //   const day_keta = ('00' + day).slice(-2);
+
+    //   return year_keta + "/" + mon_keta + "/" + day_keta;
+    // }
+
+    // console.log(formatYMD("2021 1 1")); // 2021/01/01
+    // console.log(formatYMD("2020 10 10")); // 2020/10/10
+    // console.log(formatYMD("794 11 29")); // 0794/11/29
+
+
+    //Q29   
+
+    // function convertAtToAtMark(s) {
+    //   return s.replace(/at/g, "@");
+    // }
+
+    // console.log(convertAtToAtMark("gsatcodeatquantity")); // gs@code@quantity
+    // console.log(convertAtToAtMark("atatatjojoatatat")); // @@@jojo@@@
+
+
+    //Q30   
+
+    // function getNeedBox(m, n) {
+    //   if (n % m > 0) {
+    //     return Math.floor(n / m) + 1;
+    //   } else {
+    //     return n / m;
+    //   }
+    // }
+
+    // console.log(getNeedBox(7, 30)); // 5
+    // console.log(getNeedBox(3, 100)); // 34
+    // console.log(getNeedBox(7, 5)); // 1
+
+    //Q31    
+
+    // function canStoreBooks(s) {
+    //   const arr = s.split(' ');
+    //   const b = arr[0];
+    //   const d = arr[1];
+    //   const h = arr[2];
+
+    //   if (d * h >= b) {
+    //     return "OK";
+    //   } else {
+    //     return "NG";
+    //   }
+    // }
+
+    // console.log(canStoreBooks("400 5 85")); // OK
+    // console.log(canStoreBooks("500 4 70")); // NG
+
+
+    // Q32     
+
+    // function calculateNumberOfGames(n) {
+    //   return n * (n - 1) / 2;
+    // }
+
+    // console.log(calculateNumberOfGames(4)); // 6
+    // console.log(calculateNumberOfGames(10)); // 45
+
+
+    //Q33    
+
+    // function daysOfGoOut(s) {
+    //   let cnt = 0;
+    //   const arr = s.split(' ');
+    //   for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i] <= 30) {
+    //       cnt++;
+    //     }
+    //   }
+    //   return cnt;
+    // }
+    // console.log(daysOfGoOut("13 0 15 30 89 100 30")); // 5
+    // console.log(daysOfGoOut("0 14 18 22 0 2 4")); // 7
+    // console.log(daysOfGoOut("99 99 99 99 99 99 99")); // 0
+
+
+    //Q34   
+
+    // function isEquilateralTriangle(s) {
+    //   const arr = s.split(" ");
+    //   const a = arr[0];
+    //   const b = arr[1];
+    //   const c = arr[2];
+    //   if (a === b && a === c) {
+    //     return "YES";
+    //   } else {
+    //     return "NO"
+    //   }
+    // }
+
+    // console.log(isEquilateralTriangle("10 10 10")); // yes
+    // console.log(isEquilateralTriangle("3 4 5")); // No
+
+
+    // Q35   
+
+    // function showWeather(n) {
+    //   if (n >= 0 && n <= 30) {
+    //     return "sunny";
+    //   } else if (n >= 31 && n <= 70) {
+    //     return "cloudy";
+    //   } else {
+    //     return "rainy";
+    //   }
+    // }
+
+    // console.log(showWeather(31)); // cloudy
+    // console.log(showWeather(2)); // sunny
+    // console.log(showWeather(71)); // rainy
+
+
+    //Q36    
+
+    // function greet(s1, s2) {
+    //   if (s2 = "M") {
+    //     return "Hi,Mr." + s1;
+    //   } else {
+    //     return "Hi,Ms." + s1;
+    //   }
+    // }
+
+    // console.log(greet("Stroheim", "M")); // Hi, Mr.Stroheim
+    // console.log(greet("Trish", "F")); // Hi, Ms.Trish
+
+
+    //Q37    
+
+    // function convertNumberToAlphabet(s) {
+    //   const res = s.replace(/5/g, 'A');
+    //   const res2 = res.replace(/4/g, "B");
+    //   const res3 = res2.replace(/3/g, "C");
+    //   const res4 = res3.replace(/2/g, "D");
+    //   const res5 = res4.replace(/1/g, "E");
+    //   return res5;
+    // }
+
+    // console.log(convertNumberToAlphabet("53342")); // ACCBD
+    // console.log(convertNumberToAlphabet("22222")); // DDDDD
+    // console.log(convertNumberToAlphabet("51111")); // AEEEE
+
+
+    //Q38   
+
+    // function getNumberOfSteps(s) {
+    //   const arr = s.split(" ");
+    //   return Math.max(...arr);
+    // }
+
+    // console.log(getNumberOfSteps("1 2 5")); // 5
+    // console.log(getNumberOfSteps("2 5 5")); // 5
+    // console.log(getNumberOfSteps("1 2 1")); // 2
+
+
+    //Q39      
+
+    // function getInterval(s) {
+    //   const arr = s.split(" ");
+    //   let arr2 = [];
+    //   for (let i = 0; i < arr.length; i++) {
+    //     arr2.push(arr[i + 1] - arr[i]);
+    //   }
+    //   arr2.pop(); //配列の末尾削除（NaNがあるから）
+    //   return arr2.join(" ");
+    // }
+
+    // console.log(getInterval("5 8 19 25 31")); // 3 11 6 6
+    // console.log(getInterval("2 3 7 9 28")); // 1 4 2 19
+
+
+    //Q40 
+
+    // function getAutumn(s) {
+    //   return s.replace("noaki", "");
+    // }
+
+    // console.log(getAutumn("codenoaki")); // code
+    // console.log(getAutumn("dokusyo")); // dokusyo
+    // console.log(getAutumn("javascriptnoaki")); // javascript
+
+    //Q41  
+
+    // function getNumberOfDango(s) {
+    //   const arr = s.split(" ");
+    //   let kodomo1 = arr[0];
+    //   let kodomo2 = arr[1];
+
+    //   if (kodomo1 > 5) {
+    //     kodomo1 = 5;
+    //   } else {
+    //   }
+
+    //   if (kodomo2 > 5) {
+    //     kodomo2 = 5;
+    //   } else {
+    //   }
+
+    //   const kekka1 = parseFloat(kodomo1); //parseFloat()は文字列を実数に変換
+    //   const kekka2 = parseFloat(kodomo2);
+
+    //   return kekka1 + kekka2;
+    // }
+
+    // console.log(getNumberOfDango("3 50")); // 8
+    // console.log(getNumberOfDango("100 500")); // 10
+    // console.log(getNumberOfDango("2 4")); // 6
+
+    //Q42 
+
+    // function isReadyForSummer(s) {
+    //   let count = 0;  // 文字数を格納
+    //   const su = /S/g;  // 正規表現
+    //   const arr = s.match(su);
+
+    //   if (arr == null) {
+    //     count = 0;
+    //   } else {
+    //     count = arr.length;
+    //   }
+    //   if (count >= 5) {
+    //     return "OK";
+    //   } else {
+    //     return "NG"
+    //   }
+
+    // }
+
+    // console.log(isReadyForSummer("W W W W W S S S S S")); // OK
+    // console.log(isReadyForSummer("S S W W S W W W W W")); // NG
+    // console.log(isReadyForSummer("W S S S S S S S S W")); // OK
+
+
+    //Q43  
+
+    // function getNumberOfHuman(n) {
+    //   let cnt = 0;
+    //   for (i = 1; i <= n; i++) {
+    //     cnt = cnt + i;
+    //   }
+    //   return cnt;
+    // }
+
+    // console.log(getNumberOfHuman(4)); // 10
+    // console.log(getNumberOfHuman(10)); // 55
+    // console.log(getNumberOfHuman(50)); // 1275
+
+    //Q44 
+
+    // function candyOrChocolate(s) {
+    //   if (s === "chocolate" || s === "candy") {
+    //     return "Thanks!";
+    //   } else {
+    //     return "No!"
+    //   }
+    // }
+
+    // console.log(candyOrChocolate("chocolate")); // Thanks!
+    // console.log(candyOrChocolate("candy")); // Thanks!
+    // console.log(candyOrChocolate("pannacotta")); // No!
+
+    //Q45 
+
+    // function canParty(s) {
+    //   if (s.length >= 11) {
+    //     return "OK";
+    //   } else {
+    //     return 11 - s.length;
+    //   }
+    // }
+
+    // console.log(canParty("11111111111")); // OK
+    // console.log(canParty("1111")); // 7
+    // console.log(canParty("1111111111111111")); // OK
+
+    //Q46 
+
+    // function bestCopy(s) {
+    //   return "BEST in " + s;
+    // }
+
+    // console.log(bestCopy("a decade")); // Best in a decade
+    // console.log(bestCopy("the world")); // Best in the world
+    // console.log(bestCopy("history ever")); // Best in history ever
+
+    //Q47 
+
+    // function probabilityGetSSR(n, t) {
+    //   return Math.floor((1 - (1 - 0.01 * n) ** t) * 100);
+    // }
+
+    // console.log(probabilityGetSSR(1, 100)); // 63
+    // console.log(probabilityGetSSR(1.5, 70)); // 65
+    // console.log(probabilityGetSSR(1, 200)); // 87
+
+    //Q48   
+
+    // function getStartTimeForCook(s, t) {
+
+    //   const arr = s.split(":");
+    //   const ji = parseFloat(arr[0] * 60);
+    //   const fun = parseFloat(arr[1]);
+    //   const total = ji + fun;
+    //   const result = total - t;
+    //   const ji2 = Math.floor(result / 60);
+    //   const fun2 = result % 60;
+
+    //   return ji2 + ":" + fun2
+
+    // }
+
+    // console.log(getStartTimeForCook("19:00", 90)); // 17:30
+    // console.log(getStartTimeForCook("20:00", 20)); // 19:40
+    // console.log(getStartTimeForCook("20:30", 80)); // 19:10
+
+    //Q49  
+
+    // function convertToUppercase(s) {
+    //   s1 = s.replace(/1/g, '１');
+    //   s2 = s1.replace(/2/g, '２');
+    //   s3 = s2.replace(/3/g, '３');
+    //   s4 = s3.replace(/4/g, '４');
+    //   s5 = s4.replace(/5/g, '５');
+    //   s6 = s5.replace(/6/g, '６');
+    //   s7 = s6.replace(/7/g, '７');
+    //   s8 = s7.replace(/8/g, '８');
+    //   s9 = s8.replace(/9/g, '９');
+    //   s0 = s9.replace(/0/g, '０');
+    //   return s0;
+
+    // }
+
+    // console.log(convertToUppercase("1234567")); // １２３４５６７
+    // console.log(convertToUppercase("1111111")); // １１１１１１１
+    // console.log(convertToUppercase("1145140")); // １１４５１４０
+
+    //Q50  
+
+    // function fireEmployees(employees, fireEmployees) {
+    //   const list = employees.split(" ");
+    //   const fire = fireEmployees.split(" ");
+    //   return list.filter(i => fire.indexOf(i) == -1)
+
+    // }
+
+    // console.log(
+    //   fireEmployees(
+    //     "Jotaro Joseph Avdol Polnareff Tenmei Iggy",
+    //     "Avdol Tenmei Iggy"
+    //   )
+    // ); // Jotaro Joseph Polnareff
+    // console.log(
+    //   fireEmployees(
+    //     "Giorno Bucciarati Abbacchio Mista Narancia Fugo Trish",
+    //     "Bucciarati Abbacchio Narancia"
+    //   )
+    // ); // Giorno Mista Fugo Trish
+    // console.log(
+    //   fireEmployees(
+    //     "Jolyne Ermes Emporio F・F Weather Anasui",
+    //     "Jolyne Ermes F・F Weather Anasui"
+    //   )
+    ; // Emporio
+
+    //Q51    
+
+    //  function outputProfile(obj) {
+
+    //     if (obj.name == null || obj.age == null || obj.gender == null) {
+    //       return "情報がありません";
+    //     } else {
+    //       if (obj.gender === "male") {
+    //         return "彼の名前は" + obj.name + "で" + obj.age + "歳です";
+    //       } else {
+    //         return "彼女の名前は" + obj.name + "で" + obj.age + "歳です";
+    //       }
+    //     }
+    //   }
+    //   const taro = {
+    //     name: "Taro",
+    //     age: 25,
+    //     gender: "male",
+    //   };
+
+    //   console.log(outputProfile(taro)); //彼の名前はTaroで25歳です
+
+    //   const hanako = {
+    //     name: "Hanako",
+    //     age: 30,
+    //     gender: "female",
+    //   };
+
+    //   console.log(outputProfile(hanako)); // 彼女の名前はHanakoで30歳です
+
+    //   const hatena = {
+    //     name: "hatena",
+    //     age: 20,
+    //   };
+
+    //   console.log(outputProfile(hatena)); //  情報がありません
+
+    //52
+
+    // function combineArray(a, b) {
+    //   return a.concat(b);
+    // }
+
+    // const abc = ["a", "b", "c"];
+    // const def = ["d", "e", "f"];
+
+    // console.log(combineArray(abc, def)); //["a", "b", "c", "d", "e", "f"]
+
+    // const gen = ["米", "トイレットペーパー", "ちゅーる", "酒"];
+    // const yui = ["洗剤", "肉", "ブロッコリー"];
+
+    // console.log(combineArray(gen, yui)); // ["米", "トイレットペーパー", "ちゅーる", "酒", "洗剤", "肉", "ブロッコリー"]
+
+    //53
+
+    // function createBadScoreArray(a) {
+
+    //   let numbers = a.split(" ");
+    //   for (let i = 0; i < numbers.length; i++) {
+    //     numbers[i] = parseInt(numbers[i]); //文字列→数値
+    //   }
+
+    //   numbers.sort(function (first, second) {
+    //     if (first > second) {
+    //       return 1;
+    //     } else if (first < second) {
+    //       return -1;
+    //     } else {
+    //       return 0;
+    //     }
+    //   });
+
+    //   return numbers;
+    // }
+
+    // console.log(createBadScoreArray("15 8 9 100 26 1")); // 1 8 9 15 26 100
+
+    // console.log(createBadScoreArray("50 15 89 5 61 2 44")); // 2 5 15 44 50 61 89
+
+    //54
+
+    // function containStrings(str1, str2) {
+    //   return str1.includes(str2);
+    // }
+
+    // const a = "あけましておめでとうございます";
+    // const b = "おめでとう";
+
+    // console.log(containStrings(a, b)); // true
+
+    // const c = "Love the life you live. Live the life you love.";
+    // const d = "best";
+
+    // console.log(containStrings(c, d)); // false
+
+    //55
+
+    // function createObject(a, b) {
+
+    //   const obj = {
+    //     "name": a,
+    //     "age": b
+
+    //   }
+    //   return obj;
+
+    // }
+
+    // console.log(createObject("ichiro", 20)); // { name: "ichiro", age: 20, }
+    // console.log(createObject("momoko", 22)); // { name: "momoko", age: 22, }
+
+    //56
+
+
+    // function randomGreet(a, b, c) {
+    //   const arr = [];
+    //   arr.push(a);
+    //   arr.push(b);
+    //   arr.push(c);
+
+    //   return arr[Math.floor(Math.random() * arr.length)];
+
+    // }
+    // console.log(randomGreet("おはよう", "こんにちは", "こんばんは")); // おはようorこんにちはorこんばんは
+    // console.log(randomGreet("Hi!", "Hello!", "Bye!")); // Hi! or Hello! or Bye!
+
+
+    //57
+
+    // function sortObject(obj) {
+
+    //   for (let i = 0; i < obj.length; i++) {
+    //     //obj[i].id = parseInt(obj[i].id); //文字列→数値
+    //   }
+
+    //   obj.sort(function (first, second) {
+    //     if (first.id > second.id) {
+    //       return 1;
+    //     } else if (first.id < second.id) {
+    //       return -1;
+    //     } else {
+    //       return 0;
+    //     }
+    //   });
+
+    //   return obj[0].id + ":" + obj[0].name + "(" + obj[0].age + ")," + obj[1].id + ":" + obj[1].name + "(" + obj[1].age + ")," + obj[2].id + ":" + obj[2].name + "(" + obj[2].age + ")";
+    // }
+
+    // const objectArray1 = [
+    //   {
+    //     id: 8,
+    //     name: "Emily",
+    //     age: 29,
+    //   },
+    //   {
+    //     id: 1,
+    //     name: "John",
+    //     age: 22,
+    //   },
+    //   {
+    //     id: 4,
+    //     name: "Bob",
+    //     age: 30,
+    //   },
+    // ];
+
+    // console.log(sortObject(objectArray1)); // 1:John(22),4:Bob(30),8:Emily(29)
+
+    // const objectArray2 = [
+    //   {
+    //     id: 10,
+    //     name: "taro",
+    //     age: 29,
+    //   },
+    //   {
+    //     id: 112,
+    //     name: "hanako",
+    //     age: 22,
+    //   },
+    //   {
+    //     id: 40,
+    //     name: "pochi",
+    //     age: 3,
+    //   },
+    // ];
+
+    // console.log(sortObject(objectArray2)); // 10:taro(29),40:pochi(3),112:hanako(22)
+
+    //58
+
+    // function createNameArray(array) {
+    //   let arr = [];
+    //   for (let i = 0; i < array.length; i++) {
+
+    //     arr.push(array[i].name);
+    //   }
+    //   return arr;
+    // }
+
+    // const objectArray3 = [
+    //   {
+    //     id: 8,
+    //     name: "Emily",
+    //     age: 29,
+    //   },
+    //   {
+    //     id: 1,
+    //     name: "John",
+    //     age: 22,
+    //   },
+    //   {
+    //     id: 4,
+    //     name: "Bob",
+    //     age: 30,
+    //   },
+    // ];
+
+    // console.log(createNameArray(objectArray3)); // ["John", "Emily", "Bob"]
+
+    // const objectArray4 = [
+    //   {
+    //     id: 10,
+    //     name: "taro",
+    //     age: 29,
+    //   },
+    //   {
+    //     id: 112,
+    //     name: "hanako",
+    //     age: 22,
+    //   },
+    //   {
+    //     id: 40,
+    //     name: "pochi",
+    //     age: 3,
+    //   },
+    // ];
+    // console.log(createNameArray(objectArray4)); // ["pochi", "hanako", "taro"]
+
+    //59
+
+    // function filterUnder25Array(array) {
+    //   let u25 = [];
+    //   for (let i = 0; i < array.length; i++) {
+    //     //array[i].age = parseInt(array[i].age); //文字列→数値
+
+    //     if (array[i].age <= 25) {
+    //       u25.push(array[i].id);
+    //     } else {
+
+    //     }
+    //   }
+    //   return u25;
+    // }
+
+    // const objectArray5 = [
+    //   {
+    //     id: 8,
+    //     name: "Emily",
+    //     age: 29,
+    //   },
+    //   {
+    //     id: 1,
+    //     name: "John",
+    //     age: 22,
+    //   },
+    //   {
+    //     id: 4,
+    //     name: "Bob",
+    //     age: 30,
+    //   },
+    // ];
+
+    // console.log(filterUnder25Array(objectArray5)); // [1]
+
+    // const objectArray6 = [
+    //   {
+    //     id: 10,
+    //     name: "taro",
+    //     age: 29,
+    //   },
+    //   {
+    //     id: 112,
+    //     name: "hanako",
+    //     age: 22,
+    //   },
+    //   {
+    //     id: 40,
+    //     name: "pochi",
+    //     age: 3,
+    //   },
+    // ];
+
+    // console.log(filterUnder25Array(objectArray6)); // [112, 40]
+
+    //60
+
+    // function canTakeThis(arr) {
+    //   let total = 0;
+    //   for (let i = 0; i < arr.length; i++) {
+    //     //arr[i].price = parseInt(arr[i].price); //文字列→数値
+
+
+    //     total = total + arr[i].price;
+    //   }
+
+    //   if (total <= 114514) {
+    //     return "true";
+    //   } else {
+    //     return "false";
+    //   }
+
+    // }
+    // const tarosCart = [
+    //   {
+    //     id: 8,
+    //     name: "Yoich",
+    //     price: 5800,
+    //     count: 2,
+    //   },
+    //   {
+    //     id: 1,
+    //     name: "Yamasaki30",
+    //     price: 3000000,
+    //     count: 1,
+    //   },
+    //   {
+    //     id: 4,
+    //     name: "Chita",
+    //     price: 3600,
+    //     count: 1,
+    //   },
+    // ];
+
+    // console.log(canTakeThis(tarosCart)); // false
+
+    // const hanakosCart = [
+    //   {
+    //     id: 10,
+    //     name: "ひまわり",
+    //     price: 280,
+    //     count: 3,
+    //   },
+    //   {
+    //     id: 112,
+    //     name: "かすみ草",
+    //     price: 220,
+    //     count: 2,
+    //   },
+    //   {
+    //     id: 40,
+    //     name: "ガーベラ",
+    //     price: 110,
+    //     count: 5,
+    //   },
+    // ];
+    // console.log(canTakeThis(hanakosCart)); // true
+
+
+    //61
+
+    // function divinationCheat(s) {
+
+    //   const arr = s.split(" ");
+
+    //   if (arr[0] === "J" && arr[1] === "J")
+    //     arr[1] = "Q";
+
+    //   return arr[0] + " " + arr[1];
+    // }
+
+    // console.log(divinationCheat("K Q")); // K Q
+    // console.log(divinationCheat("J Q")); // J Q
+    // console.log(divinationCheat("J J")); // J Q
+
+    //62
+
+    // function placeCount(s) {
+    //   const arr = s.split(" ");
+    //   return arr[1] - arr[0];
+    // }
+
+    // console.log(placeCount("3 4")); // -1
+    // console.log(placeCount("80 44")); // 36
+
+    //63
+
+    // function deathWhiteDay(n) {
+
+    //   if (n === 0) {
+    //     return 1;
+    //   } else {
+    //     return 3 * n;
+    //   }
+
+    // }
+
+    // console.log(deathWhiteDay(1)); // 3
+    // console.log(deathWhiteDay(99)); // 297
+    // console.log(deathWhiteDay(0)); // 1
+
+    //64
+
+    // function convertLeet(s) {
+    //   const s2 = s.replace(/A/g, "4");
+    //   const s3 = s2.replace(/E/g, "3");
+    //   const s4 = s3.replace(/G/g, "6");
+    //   const s5 = s4.replace(/I/g, "1");
+    //   const s6 = s5.replace(/O/g, "0");
+    //   const s7 = s6.replace(/S/g, "5");
+    //   const s8 = s7.replace(/Z/g, "2");
+
+    //   return s8;
+    // }
+
+    // console.log(convertLeet("ALANTURING")); // 4L4NTUR1N6
+    // console.log(convertLeet("GSACADEMY")); // 654C4D3MY
+
+    //65
+
+    // function isPerfectNumber(s) {
+
+
+    //   let arr = s.split(" ");
+    //   let arr2 = [];
+    //   let hantei = [];
+    //   for (let i = 0; i < arr.length; i++) {
+    //     let sum = 0;
+    //     let num = arr[i];
+
+    //     for (let j = 1; j < num; j++) {
+    //       if (num % j === 0) {
+    //         sum += j;
+
+    //       }
+    //     }
+
+    //     //この段階でarrとsumが一致の判定をしてあげればよいかも
+    //     if (arr[i] == sum) {
+    //       hantei.push("perfect");
+    //     } else if (sum == arr[i] + 1 || sum == arr[i] - 1) {
+    //       hantei.push("nearly");
+    //     } else {
+    //       hantei.push("neither");
+    //     }
+
+    //   }
+
+    //   return hantei;
+
+    // }
+
+    // console.log(isPerfectNumber("28 16 777")); // perfect nearly neither
+    // console.log(isPerfectNumber("3 4 5 6")); // neither nearly neither perfect
+
+    //66
+
+    // function calculatePoint(tango) {
+
+    //   const tangoArr = tango.split(",");
+
+    //   let tangoBara = [];
+    //   for (let i = 0; i < tangoArr.length; i++) {
+    //     const tangoPair = tangoArr[i].split(" ");
+    //     tangoBara.push(tangoPair);
+    //   }
+
+    //   let score = 0;
+
+    //   for (let j = 0; j < tangoBara.length; j++) {
+
+    //     if (tangoBara[j][0].length == tangoBara[j][1].length) {//文字列の長さを比較
+
+    //       const word1 = tangoBara[j][0].split("");//1文字ずつ格納
+    //       const word2 = tangoBara[j][1].split("");
+
+    //       let ng = 0;//合わなかった単語数をカウント
+
+    //       for (let k = 0; k < word1.length; k++) {
+    //         if (word1[k] !== word2[k]) {
+    //           ng = ng + 1;
+    //         } else {
+    //           //スペル同じなら何もしない
+    //         }
+    //       }
+
+    //       if (ng >= 2) {
+    //         score = score + 0;
+    //       } else if (ng === 1) {
+    //         score = score + 1;
+    //       } else {
+    //         score = score + 2;
+    //       }
+
+    //     } else {
+    //       //何もしない
+    //     }
+    //   }
+    //   return score;
+
+    // }
+
+
+    // console.log(calculatePoint("apple aple,orange olange,grape glepe,lemon lemon")); // 3
+    // console.log(
+    //   calculatePoint(
+    //     "january januarry,february febrary,march march,april aplil,may may,june june,july jury,august ougust,september septenber,october october,november novembar,december dicembar"
+    //   )
+    // ); // 13
+
+    //67
+    // function getAnswer(s) {
+
+    //   const siki = s.split(" ");
+
+    //   if (siki[0] == "x") {//一つ目の文字がxの場合
+    //     if (siki[1] == "+") {//+の場合
+    //       return parseInt(siki[4]) - parseInt(siki[2])
+    //     } else {//-の場合
+    //       return parseInt(siki[4]) + parseInt(siki[2])
+    //     }
+
+    //   } else if (siki[2] == "x") {//二つ目の文字がxの場合
+    //     if (siki[1] == "+") {//+の場合
+    //       return parseInt(siki[4]) - parseInt(siki[2])
+    //     } else {//-の場合
+    //       return parseInt(siki[0]) - parseInt(siki[4])
+    //     }
+
+    //   } else if (siki[4] == "x") {//三つ目の文字がxの場合
+    //     if (siki[1] == "+") { //+の場合
+    //       return parseInt(siki[0]) + parseInt(siki[2])
+    //     } else {  //-の場合
+    //       return parseInt(siki[0]) - parseInt(siki[2])
+    //     }
+    //   }
+    // }
+
+    // console.log(getAnswer("1 + 3 = x")); // 4
+    // console.log(getAnswer("6 - x = 3")); // 3
+    // console.log(getAnswer("x - 1 = 5")); // 6
+
+    //68
+
+    // function formatHour(s) {
+    //   const arr = s.split(" ");
+    //   const mon = arr[0];
+    //   const time = arr[1];
+
+    //   const monArr = mon.split("/");
+    //   const timeArr = time.split(":");
+    //   let day = parseInt(monArr[1]);
+    //   let hour = parseInt(timeArr[0]);
+
+    //   if (hour >= 24) {
+    //     day = day + Math.floor(hour / 24);
+    //     hour = hour - 24 * Math.floor(hour / 24);
+    //     hour = ('00' + hour).slice(-2);
+    //   } else {
+    //     hour = ('00' + hour).slice(-2);
+    //   }
+
+    //   return monArr[0] + "/" + day + " " + hour + ":" + timeArr[1];
+
+    // }
+
+    // console.log(formatHour("01/27 24:30")); // 01/28 00:30
+    // console.log(formatHour("02/31 73:59")); // 02/34 01:59
+    // console.log(formatHour("12/31 00:00")); // 12/31 00:00
+    // console.log(formatHour("12/31 25:01")); // 12/32 01:01
+
+    //69
+
+    // function getCostForFreeCoffee(s) {
+
+    //   const arr = s.split(" ");
+    //   let kakaku = parseInt(arr[0]);
+    //   let per = parseInt(arr[1]) * 0.01;
+    //   let sum = kakaku;
+
+    //   for (i = 1; i < 100000; i++) {  //無理やりだけど、、、
+    //     if (kakaku >= 0) {
+    //       kakaku = Math.floor(kakaku * (1 - per));
+    //       sum = sum + kakaku;
+    //     } else {
+    //       break;
+    //     }
+    //   }
+
+    //   return sum;
+    // }
+
+    // console.log(getCostForFreeCoffee("300 50")); // 596
+    // console.log(getCostForFreeCoffee("1000 99")); // 1010
+
+    //70
+
+    // function getElevatorMove(s) {
+    //   const move = s.split(" ");
+
+    //   let cnt = 0;
+    //   let sho = 0;
+    //   for (i = 0; i < move.length; i++) {
+
+    //     if (i > 0) {
+    //       let dai = move[i];
+    //       cnt = cnt + Math.abs(dai - sho);
+    //       sho = move[i];
+
+    //     } else {
+    //       sho = move[i];
+    //       cnt = sho - 1;
+    //     }
+
+    //   }
+
+    //   return cnt;
+
+    // }
+
+    // console.log(getElevatorMove("3 1 4")); // 7
+    // console.log(getElevatorMove("17 28 11 62 64 4 7 17")); // 170
+
+    //71
+
+    // function isSingleNumber(s) {
+
+    //     const num = s.split(" ");
+    //     const str = num.join("");
+
+    //     if (String(str).match(/^([0-9])\1+$/) !== null) { //理解してない(正規表現）
+    //       return "Yes";
+    //     } else {
+    //       return "No";
+    //     }
+    //   }
+
+    //   console.log(isSingleNumber("11 1")); // Yes
+    //   console.log(isSingleNumber("11 11")); // Yes
+    //   console.log(isSingleNumber("12 11")); //  No
+
+
+    //72
+
+    // function judgeCheapSheet(s) {
+    //   const arr = s.split(",");
+    //   const data1 = arr[0].split(" ");
+    //   const data2 = arr[1].split(" ");
+
+    //   const menseki1 = parseInt(data1[0]) * parseInt(data1[1]);
+    //   const menseki2 = parseInt(data2[0]) * parseInt(data2[1]);
+    //   const price1 = parseInt(data1[2]);
+    //   const price2 = parseInt(data2[2]);
+
+    //   const per1 = menseki1 / price1;
+    //   const per2 = menseki2 / price2;
+
+    //   if (per1 > per2) {
+    //     return arr[0];
+    //   } else if (per1 == per2) {
+    //     return "DRAW";
+    //   } else {
+    //     return arr[1];
+    //   }
+    // }
+
+    // console.log(judgeCheapSheet("5 18 1000,12 21 3000")); // 5 18 1000
+    // console.log(judgeCheapSheet("5 5 1800,5 10 3600")); // DRAW
+
+    // 73
+
+    // function getLastNumber(s) {
+    //     const data = s.split(" ");
+
+    //     let total = 0;
+    //     for (i = 0; i < data.length; i++) {
+    //       total = total + parseInt(data[i]);
+    //     }
+
+    //     const str = String(total);
+    //     return str.slice(-1);
+
+    //   }
+
+    //   console.log(getLastNumber("1 9 8 9 12")); // 9
+    //   console.log(getLastNumber("1 1 1 1 6")); // 0
+
+
+    //74
+
+    // function getAllLength(n) {
+    //   const length5 = n * (5 / 3);
+    //   const length7 = n * (7 / 3);
+
+    //   return n + length5 + length7;
+
+    // }
+
+    // console.log(getAllLength(60)); // 300
+    // console.log(getAllLength(9)); // 45
+
+
+    //75
+
+
+    // function hasNgWord(s) {
+    //   const arr = s.split(" ");
+    //   const w = new RegExp(arr[0], 'i'); //正規表現、要復習
+    //   const str = arr[1];
+
+    //   if (w.test(str)) {
+    //     return "NG";
+    //   } else {
+    //     return str;
+    //   }
+    // }
+
+    // console.log(hasNgWord("ngword thisisngword")); // NG
+    // console.log(hasNgWord("ngword gsprogramming")); // gsprogramming
+
+
+    //76
+
+    // function canDry(s) {
+    //   const arr = s.split(" ");
+
+    //   const tem = parseInt(arr[0]);
+    //   const hum = parseInt(arr[1]);
+
+    //   if (tem >= 25 && hum <= 40) {
+    //     return "No";
+    //   } else if (tem < 25 && hum > 40) {
+    //     return "No";
+    //   } else {
+    //     return "Yes";
+    //   }
+
+    // }
+
+    // console.log(canDry("25 50")); // Yes
+    // console.log(canDry("10 20")); // Yes
+    // console.log(canDry("20 50")); // No
+
+    //77
+
+    // function getBestScore(s) {
+    //   const arr = s.split(" ");
+
+    //   let strArr = [];
+    //   for (let i = 0; i < arr.length; i++) {
+    //     arr[i] = parseInt(arr[i]);
+    //     strArr.push(arr[i]);
+    //   }
+
+
+    //   strArr.sort(function (a, b) {
+    //     if (a < b) {
+    //       return -1;
+    //     } else if (a > b) {
+    //       return 1;
+    //     } else {
+    //       return 0;
+    //     }
+    //   });
+
+    //   const num1 = strArr[2] * 10 + strArr[0];
+    //   const num2 = strArr[3] * 10 + strArr[1];
+
+    //   return num1 + num2;
+
+    // }
+    // console.log(getBestScore("2 9 3 8")); // 175
+    // console.log(getBestScore("7 8 7 7")); // 164
+
+    //78
+
+    // function filterLogByKeyword(s) {
+
+    //   const arr = s.split(",");
+    //   const imp = arr[0];
+
+    //   const logArr = arr[1].split(" ");
+
+    //   let kekka = [];
+    //   for (i = 0; i < logArr.length; i++) {
+
+    //     if (logArr[i].indexOf(imp) >= 0) {
+    //       kekka.push(logArr[i]);
+    //     }
+    //   }
+    //   return kekka.join(" ");
+    // }
+
+    // console.log(
+    //   filterLogByKeyword("gs,gsacademytokyo javascript gsacademyfukuoka gsbase")
+    // ); // gsacademytokyo gsacademyfukuoka gsbase
+    // console.log(
+    //   filterLogByKeyword("script,javascript typescript googleappscript java")
+    // ); // javascript typescript googleappscript
+    // console.log(
+    //   filterLogByKeyword(
+    //     "dio,Giorno Bucciarati Abbacchio Mista Narancia Fugo Trish"
+    //   )
+    // ); // None
+
+
+
+    //79
+
+    // function isValidEmail(s) {
+
+    //   //メールアドレスのパターン 正規表現
+    //   const pattern = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_-]+\.[A-Za-z0-9]+$/;
+
+    //   //「@」から始まらないこと→OK
+    //   // スペースがないこと→OK
+    //   //「@」を 1 つのみ含んでいること→OK
+    //   //「@」の後に「.」があること→OK
+
+    //   if (pattern.test(s)) {
+    //     return "true";
+    //   } else {
+    //     return "false";
+    //   }
+    // }
+
+    // console.log(isValidEmail("ccc@aaa.com")); // true
+    // console.log(isValidEmail("c@cc@aaa.com")); // false
+    // console.log(isValidEmail("cc c@aaa.com")); // false
+    // console.log(isValidEmail("cc.c@aaacom")); // false
+    // console.log(isValidEmail("cc.c@aaa.com")); // true
+    // console.log(isValidEmail("@aaa.com")); // false
+
+    // console.log(isValidEmail("ccc@aaa.com")); // true
+    // console.log(isValidEmail("c@cc@aaa.com")); // false
+    // console.log(isValidEmail("cc c@aaa.com")); // false
+    // console.log(isValidEmail("cc.c@aaacom")); // false
+    // console.log(isValidEmail("cc.c@aaa.com")); // true
+    // console.log(isValidEmail("@aaa.com")); // false
+
+    //80
+
+
+    // function getFibonacciNth(s) {
+
+    //   let fib = [];
+    //   fib[0] = 0;
+    //   fib[1] = 1;
+    //   for (let i = 2; i <= s; i++) {
+    //     fib[i] = fib[i - 2] + fib[i - 1];
+    //   }
+    //   return fib[s];
+    // }
+
+    // console.log(getFibonacciNth(1)); // 1
+    // console.log(getFibonacciNth(5)); // 5
+    // console.log(getFibonacciNth(10)); // 55
+    // console.log(getFibonacciNth(90)); // 2880067194370816120
+
+
+  </script>
+
+
+</body>
+
+</html>
